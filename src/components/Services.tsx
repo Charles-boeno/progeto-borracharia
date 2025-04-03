@@ -3,8 +3,6 @@
 import { motion } from "framer-motion";
 import {
   Car,
-  Gauge,
-  Settings,
   AlertTriangle,
   Clock,
   Wrench,
@@ -15,16 +13,6 @@ const services = [
     icon: Car,
     title: "Troca de Pneus",
     description: "Serviço profissional de troca de pneus para todos os veículos",
-  },
-  {
-    icon: Gauge,
-    title: "Balanceamento",
-    description: "Balanceamento preciso para um rodar mais suave",
-  },
-  {
-    icon: Settings,
-    title: "Alinhamento",
-    description: "Alinhamento computadorizado de última geração",
   },
   {
     icon: AlertTriangle,
