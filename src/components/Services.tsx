@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Car, AlertTriangle, Clock, Wrench, LucideIcon } from "lucide-react";
 import { ServiceModal } from "./ServiceModal";
+import { ServiceIcon } from "./ServiceIcon";
 
 export interface Service {
   icon: LucideIcon;
@@ -92,14 +93,10 @@ export function Services() {
             className="group cursor-pointer rounded-lg bg-white p-6 shadow-lg transition-all hover:shadow-xl"
           >
             <div className="flex items-start space-x-4">
-              <motion.div
-                initial={{ rotate: 0 }}
-                whileHover={{ rotate: 360 }}
-                transition={{ duration: 0.5 }}
-                className="rounded-full bg-yellow-50 p-3"
-              >
-                <service.icon className="h-8 w-8 text-yellow-500" />
-              </motion.div>
+              <ServiceIcon 
+                Icon={service.icon} 
+                isHovered={false} 
+              />
               <div>
                 <h3 className="mb-2 text-xl font-semibold text-zinc-900 group-hover:text-yellow-500">
                   {service.title}
