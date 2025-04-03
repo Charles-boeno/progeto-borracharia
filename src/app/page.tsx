@@ -3,6 +3,7 @@
 import { Menu } from "@/components/Menu";
 import { Banner } from "@/components/Banner";
 import { Services } from "@/components/Services";
+import { ServiceFlow } from "@/components/ServiceFlow";
 import { ServiceComparison } from "@/components/ServiceComparison";
 import { LocationMap } from "@/components/Map";
 import { AboutUs } from "@/components/AboutUs";
@@ -16,6 +17,7 @@ export default function HomePage() {
       <Menu />
       <Banner />
       <Services />
+      <ServiceFlow />
       <ServiceComparison />
       <LocationMap />
       <AboutUs />
