@@ -1,6 +1,6 @@
 "use client";
 
-import { Facebook, Instagram, Mail, MapPin, Phone, WhatsApp } from "lucide-react";
+import { Facebook, Instagram, Mail, MapPin, Phone, MessageSquare } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function Footer() {
@@ -37,7 +37,7 @@ export function Footer() {
                 whileHover={{ scale: 1.1 }}
                 className="text-zinc-400 hover:text-yellow-500"
               >
-                <WhatsApp className="h-5 w-5" />
+                <MessageSquare className="h-5 w-5" />
               </motion.a>
             </div>
           </div>
