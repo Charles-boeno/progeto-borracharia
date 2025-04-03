@@ -6,25 +6,33 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 const bannerItems = [{
-  image: "https://picsum.photos/200",
-  title: "Troca de Pneus com Desconto!",
-  description: "Aproveite nossos preços especiais em todas as marcas"
+  image: "https://pre-built-images.s3.amazonaws.com/webapp-uploads/8f2037d28849d7d58e28b1ad9931a5eb.png",
+  title: "Borracharia do Borracheiro",
+  description: "R. Carlos Sbaraine, 2264 - Jd. Panorama - Toledo - PR"
 }, {
   image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1600&h=600&fit=crop",
   title: "Serviço 24 Horas Disponível",
   description: "Assistência emergencial quando você mais precisa"
 }, {
-  image: "https://picsum.photos/200",
-  title: "Balanceamento Grátis",
-  description: "Na compra de pneus novos"
+  image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1600&h=600&fit=crop",
+  title: "Qualidade Garantida",
+  description: "Equipe especializada para melhor atendimento"
 }];
 export function Banner() {
   return <div className="mt-16">
-      <Swiper modules={[Autoplay, Navigation, Pagination]} navigation pagination={{
-      clickable: true
-    }} autoplay={{
-      delay: 5000
-    }} loop className="h-[600px] w-full">
+      <Swiper 
+        modules={[Autoplay, Navigation, Pagination]} 
+        navigation 
+        pagination={{
+          clickable: true
+        }} 
+        autoplay={{
+          delay: 6000,
+          disableOnInteraction: false
+        }} 
+        loop 
+        className="h-[600px] w-full"
+      >
         {bannerItems.map((item, index) => <SwiperSlide key={index}>
             <div className="relative h-full w-full bg-cover bg-center" style={{
           backgroundImage: `url(${item.image})`
