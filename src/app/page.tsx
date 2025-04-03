@@ -3,6 +3,7 @@
 import { Menu } from "@/components/Menu";
 import { Banner } from "@/components/Banner";
 import { Services } from "@/components/Services";
+import { ServiceComparison } from "@/components/ServiceComparison";
 import { LocationMap } from "@/components/Map";
 import { AboutUs } from "@/components/AboutUs";
 import { Testimonials } from "@/components/Testimonials";
@@ -15,6 +16,7 @@ export default function HomePage() {
       <Menu />
       <Banner />
       <Services />
+      <ServiceComparison />
       <LocationMap />
       <AboutUs />
       <Testimonials />
