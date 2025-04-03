@@ -17,15 +17,15 @@ export function Menu() {
   return (
     <nav className="fixed top-0 z-50 w-full bg-zinc-900 shadow-lg">
       <div className="mx-auto max-w-7xl px-4">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-20 flex-col items-center justify-center gap-4 py-4 md:h-24 md:flex-row md:justify-between md:py-0">
           <div className="flex items-center">
             <img 
               src="https://pre-built-images.s3.amazonaws.com/webapp-uploads/1590313479f7ea67deca8ed8bc901cf6.png"
               alt="Borracharia Express Logo"
-              className="h-12 w-auto"
+              className="h-16 w-auto md:h-20"
             />
           </div>
-          <div className="flex space-x-8">
+          <div className="flex flex-wrap justify-center gap-4 md:flex-nowrap md:space-x-8">
             {menuItems.map((item) => (
               <motion.button
                 key={item.id}
