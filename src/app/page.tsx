@@ -12,6 +12,7 @@ export default function HomePage() {
       <Menu />
       <Banner />
       <Services />
+      <Map />
       <AboutUs />
       <Footer />
     </main>
