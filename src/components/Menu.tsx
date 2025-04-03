@@ -1,6 +1,6 @@
 "use client";
 
-import { Home, Wrench, Disc, Tag, Phone } from "lucide-react";
+import { Home, Wrench, Users, Phone } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
@@ -10,8 +10,7 @@ export function Menu() {
   const menuItems = [
     { id: "home", label: "Início", icon: Home },
     { id: "services", label: "Serviços", icon: Wrench },
-    { id: "products", label: "Produtos", icon: Disc },
-    { id: "promotions", label: "Promoções", icon: Tag },
+    { id: "about", label: "Sobre Nós", icon: Users },
     { id: "contact", label: "Contato", icon: Phone },
   ];
 
