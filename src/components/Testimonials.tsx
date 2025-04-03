@@ -61,8 +61,8 @@ export function Testimonials() {
   };
 
   return (
-    <section className="bg-zinc-50 py-20">
-      <div className="mx-auto max-w-7xl px-4">
+    <section className="bg-zinc-50 py-4 py-md-5">
+      <div className="container-fluid">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}

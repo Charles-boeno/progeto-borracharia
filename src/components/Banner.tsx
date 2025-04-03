@@ -31,7 +31,7 @@ export function Banner() {
           disableOnInteraction: false
         }} 
         loop 
-        className="h-[300px] w-full md:h-[600px]"
+        className="h-[200px] w-full md:h-[400px] lg:h-[600px]"
       >
         {bannerItems.map((item, index) => <SwiperSlide key={index}>
             <div className="relative h-full w-full bg-cover bg-center" style={{

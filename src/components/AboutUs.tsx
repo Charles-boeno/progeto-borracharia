@@ -28,8 +28,8 @@ export function AboutUs() {
   ];
 
   return (
-    <section id="about" className="bg-zinc-900 py-20">
-      <div className="mx-auto max-w-7xl px-4">
+    <section id="about" className="bg-zinc-900 py-4 py-md-5">
+      <div className="container-fluid">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

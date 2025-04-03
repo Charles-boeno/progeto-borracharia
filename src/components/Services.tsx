@@ -67,7 +67,7 @@ export function Services() {
   const [selectedService, setSelectedService] = useState<Service | null>(null);
 
   return (
-    <section id="services" className="mx-auto max-w-7xl px-4 py-16">
+    <section id="services" className="container-fluid py-4 py-md-5">
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}

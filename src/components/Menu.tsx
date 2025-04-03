@@ -43,7 +43,7 @@ export function Menu() {
 
   return (
     <nav className="fixed top-0 z-50 w-full bg-zinc-900 shadow-lg">
-      <div className="mx-auto max-w-7xl px-4">
+      <div className="container-fluid">
         <div className="flex h-20 items-center justify-between">
           <div className="flex items-center">
             <img 
