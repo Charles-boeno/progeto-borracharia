@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Home, Tool, MessageSquare, Info, Phone, FacebookIcon, InstagramIcon, TwitterIcon } from 'lucide-react';
+import { Home, Wrench, MessageSquare, Info, Phone, FacebookIcon, InstagramIcon, TwitterIcon } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -33,7 +33,7 @@ const Footer = () => {
                 <Home className="h-4 w-4 mr-2" /> Início
               </Link>
               <Link to="/servicos" className="text-gray-300 hover:text-borracharia-yellow transition-colors flex items-center">
-                <Tool className="h-4 w-4 mr-2" /> Serviços
+                <Wrench className="h-4 w-4 mr-2" /> Serviços
               </Link>
               <Link to="/depoimentos" className="text-gray-300 hover:text-borracharia-yellow transition-colors flex items-center">
                 <MessageSquare className="h-4 w-4 mr-2" /> Depoimentos

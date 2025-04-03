@@ -1,11 +1,11 @@
 
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tool, Truck, RotateCw, ShieldCheck } from 'lucide-react';
+import { Wrench, Truck, RotateCw, ShieldCheck } from 'lucide-react';
 
 const servicesData = [
   {
-    icon: <Tool className="h-10 w-10 mb-4 text-borracharia-yellow" />,
+    icon: <Wrench className="h-10 w-10 mb-4 text-borracharia-yellow" />,
     title: "Troca de Pneus",
     description: "Troca rápida e segura de pneus para todos os tipos de veículos, do mais simples ao mais sofisticado."
   },
