@@ -47,7 +47,7 @@ export function Menu() {
         <div className="flex h-20 items-center justify-between">
           <div className="flex items-center">
             <img 
-              src="https://pre-built-images.s3.amazonaws.com/webapp-uploads/1590313479f7ea67deca8ed8bc901cf6.png"
+              src="/img/logo.png"
               alt="Borracharia Express Logo"
               className="h-16 w-auto md:h-20"
             />
