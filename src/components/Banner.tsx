@@ -19,13 +19,20 @@ const bannerItems = [{
   description: "Equipe especializada para melhor atendimento"
 }];
 export function Banner() {
-  return <div className="mt-16">
-      <Swiper modules={[Autoplay, Navigation, Pagination]} navigation pagination={{
-      clickable: true
-    }} autoplay={{
-      delay: 6000,
-      disableOnInteraction: false
-    }} loop className="h-[200px] w-full md:h-[400px] lg:h-[600px]">
+  return <div className="mt-16 px-4">
+      <Swiper 
+        modules={[Autoplay, Navigation, Pagination]} 
+        navigation 
+        pagination={{
+          clickable: true
+        }} 
+        autoplay={{
+          delay: 6000,
+          disableOnInteraction: false
+        }} 
+        loop 
+        className="mx-auto h-[400px] max-w-6xl"
+      >
         {bannerItems.map((item, index) => <SwiperSlide key={index}>
             <div className="relative h-full w-full bg-cover bg-center" style={{
           backgroundImage: `url(${item.image})`
