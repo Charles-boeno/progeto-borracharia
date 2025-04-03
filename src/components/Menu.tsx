@@ -9,14 +9,36 @@ export function Menu() {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { id: "home", label: "Início", icon: Home },
-    { id: "services", label: "Serviços", icon: Wrench },
-    { id: "about", label: "Sobre Nós", icon: Users },
-    { id: "contact", label: "Contato", icon: Phone },
+    { id: "home", label: "Início", icon: Home, ref: "top" },
+    { id: "services", label: "Serviços", icon: Wrench, ref: "services" },
+    { id: "about", label: "Sobre Nós", icon: Users, ref: "about" },
+    { id: "contact", label: "Contato", icon: Phone, ref: "contact" },
   ];
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const scrollToSection = (ref: string) => {
+    const isBrowser = typeof window !== 'undefined';
+    if (!isBrowser) return;
+
+    if (ref === 'top') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+    }
+
+    const element = document.getElementById(ref);
+    if (element) {
+      const offset = 80; // Height of the fixed header
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
   };
 
   return (
@@ -50,7 +72,11 @@ export function Menu() {
                 key={item.id}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => setActiveItem(item.id)}
+                onClick={() => {
+                  setActiveItem(item.id);
+                  scrollToSection(item.ref);
+                  setIsOpen(false);
+                }}
                 className={`flex items-center space-x-2 px-3 py-2 text-sm font-medium ${
                   activeItem === item.id
                     ? "text-yellow-500"
@@ -80,6 +106,7 @@ export function Menu() {
                     whileTap={{ scale: 0.95 }}
                     onClick={() => {
                       setActiveItem(item.id);
+                      scrollToSection(item.ref);
                       setIsOpen(false);
                     }}
                     className={`flex items-center space-x-2 px-3 py-2 text-sm font-medium ${

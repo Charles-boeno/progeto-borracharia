@@ -28,7 +28,7 @@ export function AboutUs() {
   ];
 
   return (
-    <section className="bg-zinc-900 py-20">
+    <section id="about" className="bg-zinc-900 py-20">
       <div className="mx-auto max-w-7xl px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
