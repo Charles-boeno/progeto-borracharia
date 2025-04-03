@@ -18,21 +18,21 @@ const testimonials: Testimonial[] = [
     name: "João Silva",
     role: "Motorista Profissional",
     content: "Excelente atendimento! Resolveram o problema do meu pneu rapidamente e com qualidade. Recomendo a todos.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=faces",
+    image: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=150&h=150&fit=crop&crop=faces",
   },
   {
     id: 2,
     name: "Maria Santos",
     role: "Empresária",
     content: "Serviço de primeira linha. A equipe é muito profissional e o atendimento 24h já me salvou várias vezes.",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=faces",
+    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop&crop=faces",
   },
   {
     id: 3,
     name: "Pedro Costa",
     role: "Taxista",
     content: "Preço justo e serviço rápido. A melhor borracharia da região, sem dúvida!",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=faces",
+    image: "https://images.unsplash.com/photo-1639149888905-fb39731f2e6c?w=150&h=150&fit=crop&crop=faces",
   },
 ];
 

@@ -6,15 +6,15 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 const bannerItems = [{
-  image: "https://pre-built-images.s3.amazonaws.com/webapp-uploads/8f2037d28849d7d58e28b1ad9931a5eb.png",
+  image: "https://images.unsplash.com/photo-1578844251758-2f71da64c96f?w=1600&h=600&fit=crop&crop=focalpoint&fp-y=.7",
   title: "Borracharia do Borracheiro",
   description: "R. Carlos Sbaraine, 2264 - Jd. Panorama - Toledo - PR"
 }, {
-  image: "https://pre-built-images.s3.amazonaws.com/webapp-uploads/7e91310d77dbac9cedf99963676e2a9a.png",
-  title: "Serviço 24 Horas Disponível",
+  image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1600&h=600&fit=crop&crop=focalpoint&fp-y=.7",
+  title: "Serviço 24 Horas Disponível", 
   description: "Assistência emergencial quando você mais precisa"
 }, {
-  image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1600&h=600&fit=crop",
+  image: "https://images.unsplash.com/photo-1632823471565-1ec3492169c2?w=1600&h=600&fit=crop&crop=focalpoint&fp-y=.7",
   title: "Qualidade Garantida",
   description: "Equipe especializada para melhor atendimento"
 }];
