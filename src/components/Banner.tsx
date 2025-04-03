@@ -11,28 +11,21 @@ const bannerItems = [{
   description: "R. Carlos Sbaraine, 2264 - Jd. Panorama - Toledo - PR"
 }, {
   image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1600&h=600&fit=crop&crop=focalpoint&fp-y=.7",
-  title: "Serviço 24 Horas Disponível", 
+  title: "Serviço 24 Horas Disponível",
   description: "Assistência emergencial quando você mais precisa"
 }, {
-  image: "https://images.unsplash.com/photo-1632823471565-1ec3492169c2?w=1600&h=600&fit=crop&crop=focalpoint&fp-y=.7",
+  image: "https://picsum.photos/200",
   title: "Qualidade Garantida",
   description: "Equipe especializada para melhor atendimento"
 }];
 export function Banner() {
   return <div className="mt-16">
-      <Swiper 
-        modules={[Autoplay, Navigation, Pagination]} 
-        navigation 
-        pagination={{
-          clickable: true
-        }} 
-        autoplay={{
-          delay: 6000,
-          disableOnInteraction: false
-        }} 
-        loop 
-        className="h-[200px] w-full md:h-[400px] lg:h-[600px]"
-      >
+      <Swiper modules={[Autoplay, Navigation, Pagination]} navigation pagination={{
+      clickable: true
+    }} autoplay={{
+      delay: 6000,
+      disableOnInteraction: false
+    }} loop className="h-[200px] w-full md:h-[400px] lg:h-[600px]">
         {bannerItems.map((item, index) => <SwiperSlide key={index}>
             <div className="relative h-full w-full bg-cover bg-center" style={{
           backgroundImage: `url(${item.image})`
