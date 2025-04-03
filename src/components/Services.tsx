@@ -2,6 +2,7 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Wrench, Truck, RotateCw, ShieldCheck } from 'lucide-react';
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const servicesData = [
   {
@@ -27,24 +28,29 @@ const servicesData = [
 ];
 
 const Services = () => {
+  const isMobile = useIsMobile();
+
   return (
-    <section id="servicos" className="py-20 bg-borracharia-lightgray">
+    <section id="servicos" className="py-12 md:py-20 bg-borracharia-lightgray">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Nossos Serviços</h2>
-          <div className="w-20 h-1 bg-borracharia-yellow mx-auto mb-6"></div>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        <div className="text-center mb-10 md:mb-16">
+          <h2 className="text-2xl md:text-4xl font-bold mb-3 md:mb-4">Nossos Serviços</h2>
+          <div className="w-16 md:w-20 h-1 bg-borracharia-yellow mx-auto mb-4 md:mb-6"></div>
+          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
             Oferecemos uma ampla gama de serviços relacionados a pneus, 
             todos com garantia de qualidade e atendimento rápido.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
           {servicesData.map((service, index) => (
-            <Card key={index} className="transition-transform hover:scale-105 border-none shadow-lg">
-              <CardHeader className="text-center pb-2">
+            <Card 
+              key={index} 
+              className="transition-transform hover:scale-105 border-none shadow-lg"
+            >
+              <CardHeader className={`text-center ${isMobile ? 'pb-1' : 'pb-2'}`}>
                 <div className="flex justify-center">{service.icon}</div>
-                <CardTitle>{service.title}</CardTitle>
+                <CardTitle className={`${isMobile ? 'text-xl' : 'text-2xl'}`}>{service.title}</CardTitle>
               </CardHeader>
               <CardContent>
                 <CardDescription className="text-center">{service.description}</CardDescription>
