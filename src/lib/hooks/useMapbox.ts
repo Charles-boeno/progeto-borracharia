@@ -14,12 +14,13 @@ const initializeMapbox = (
   coordinates: [number, number],
   zoom: number
 ): Map => {
-  if (!window.mapboxgl) {
+  const mapboxgl = window.mapboxgl;
+  if (!mapboxgl) {
     console.error('Mapbox GL JS is not loaded');
     return null;
   }
 
-  window.mapboxgl.accessToken = "pk_dummy";
+  mapboxgl.accessToken = "pk_dummy";
   
   const map = new window.mapboxgl.Map({
     container,
