@@ -14,15 +14,14 @@ const initializeMapbox = (
   coordinates: [number, number],
   zoom: number
 ): Map => {
-  const mapboxgl = window.mapboxgl;
-  if (!mapboxgl) {
+  if (!window.mapboxgl) {
     console.error('Mapbox GL JS is not loaded');
     return null;
   }
 
-  mapboxgl.accessToken = "pk_dummy";
-  
+  // Set access token directly on Map constructor
   const map = new window.mapboxgl.Map({
+    accessToken: "pk_dummy",
     container,
     style: "mapbox://styles/mapbox/streets-v12",
     center: coordinates,
