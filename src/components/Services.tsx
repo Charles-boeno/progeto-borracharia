@@ -7,7 +7,7 @@ import {
   Settings,
   AlertTriangle,
   Clock,
-  Tool,
+  Wrench2,
 } from "lucide-react";
 
 const services = [
@@ -37,7 +37,7 @@ const services = [
     description: "Assistência emergencial a qualquer hora",
   },
   {
-    icon: Tool,
+    icon: Wrench2,
     title: "Manutenção",
     description: "Serviços gerais de manutenção automotiva",
   },
