@@ -37,13 +37,6 @@ export function Banner() {
             <div className="relative h-full w-full bg-cover bg-center" style={{
           backgroundImage: `url(${item.image})`
         }}>
-              <div className="absolute inset-0 bg-black/50" />
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-                <h2 className="mb-4 text-5xl font-bold text-white">
-                  {item.title}
-                </h2>
-                <p className="text-xl text-gray-200">{item.description}</p>
-              </div>
             </div>
           </SwiperSlide>)}
       </Swiper>
