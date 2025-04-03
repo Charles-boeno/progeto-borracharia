@@ -3,6 +3,8 @@
 import { Menu } from "@/components/Menu";
 import { Banner } from "@/components/Banner";
 import { Services } from "@/components/Services";
+import { AboutUs } from "@/components/AboutUs";
+import { Footer } from "@/components/Footer";
 
 export default function HomePage() {
   return (
@@ -10,6 +12,8 @@ export default function HomePage() {
       <Menu />
       <Banner />
       <Services />
+      <AboutUs />
+      <Footer />
     </main>
   );
 }
