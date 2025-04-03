@@ -96,7 +96,6 @@ export function Menu() {
             </motion.div>
           )}
         </AnimatePresence>
-        </div>
       </div>
     </nav>
   );
