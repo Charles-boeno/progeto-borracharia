@@ -13,10 +13,14 @@ export function WhatsAppButton() {
   return (
     <motion.button
       onClick={handleClick}
-      className="fixed bottom-8 right-8 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] shadow-lg hover:bg-[#20BA5C]"
+      className="group fixed bottom-8 right-8 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] shadow-lg hover:bg-[#20BA5C]"
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
+      aria-label="Entre em contato"
     >
+      <span className="pointer-events-none absolute right-16 -translate-y-1/2 whitespace-nowrap rounded bg-zinc-800 px-2 py-1 text-sm text-white opacity-0 transition-opacity group-hover:opacity-100">
+        Entre em contato
+      </span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
