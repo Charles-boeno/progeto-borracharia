@@ -91,7 +91,7 @@ export function ServiceFlow() {
         <div className="relative mx-auto max-w-4xl">
           <div className="absolute left-1/2 top-1/2 h-1 w-full -translate-x-1/2 -translate-y-1/2 bg-zinc-200" />
           
-          <div className="relative flex justify-between">
+          <div className="relative flex flex-col space-y-8 md:flex-row md:justify-between md:space-y-0">
             {steps.map((step, index) => (
               <motion.div
                 key={step.id}

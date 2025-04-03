@@ -66,7 +66,7 @@ export function Menu() {
           </button>
 
           {/* Desktop menu */}
-          <div className="hidden md:flex md:items-center md:space-x-8">
+          <div className="hidden md:flex md:items-center md:space-x-4">
             {menuItems.map((item) => (
               <motion.button
                 key={item.id}

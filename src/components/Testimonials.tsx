@@ -81,7 +81,7 @@ export function Testimonials() {
               transition={{ duration: 0.5 }}
               className="flex flex-col items-center"
             >
-              <div className="mb-8 h-32 w-32 overflow-hidden rounded-full border-4 border-yellow-500">
+              <div className="mb-6 h-24 w-24 md:h-32 md:w-32 overflow-hidden rounded-full border-4 border-yellow-500">
                 <img
                   src={testimonials[currentIndex].image}
                   alt={testimonials[currentIndex].name}

@@ -37,7 +37,7 @@ export function AboutUs() {
           className="mb-16 text-center"
         >
           <h2 className="mb-4 text-4xl font-bold text-white">Sobre Nós</h2>
-          <p className="mx-auto max-w-2xl text-lg text-zinc-400">
+          <p className="mx-auto max-w-2xl text-base md:text-lg text-zinc-400">
             Há mais de 15 anos no mercado, a Borracharia Express se destaca pelo
             atendimento de qualidade e compromisso com a satisfação dos nossos
             clientes.

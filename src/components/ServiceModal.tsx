@@ -26,7 +26,7 @@ export function ServiceModal({ service, onClose }: ServiceModalProps) {
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0.95, opacity: 0 }}
           onClick={(e) => e.stopPropagation()}
-          className="relative w-full max-w-2xl rounded-lg bg-white p-8 shadow-xl"
+          className="relative mx-4 w-full max-w-2xl rounded-lg bg-white p-4 md:mx-0 md:p-8 shadow-xl"
         >
           <button
             onClick={onClose}
