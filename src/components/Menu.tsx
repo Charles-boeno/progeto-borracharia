@@ -19,9 +19,11 @@ export function Menu() {
       <div className="mx-auto max-w-7xl px-4">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
-            <span className="text-xl font-bold text-yellow-500">
-              Borracharia Express
-            </span>
+            <img 
+              src="https://pre-built-images.s3.amazonaws.com/webapp-uploads/1590313479f7ea67deca8ed8bc901cf6.png"
+              alt="Borracharia Express Logo"
+              className="h-12 w-auto"
+            />
           </div>
           <div className="flex space-x-8">
             {menuItems.map((item) => (
