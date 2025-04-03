@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom colors for borracharia
+				borracharia: {
+					yellow: '#FFCE00',
+					black: '#111111',
+					gray: '#444444',
+					lightgray: '#F5F5F5'
 				}
 			},
 			borderRadius: {
