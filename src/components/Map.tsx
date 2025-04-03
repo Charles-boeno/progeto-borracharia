@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useMapbox } from "@/lib/hooks/useMapbox";
 import "mapbox-gl/dist/mapbox-gl.css";
 
-const BORRACHARIA_COORDINATES: [number, number] = [-46.6388, -23.5489]; // São Paulo coordinates
+const BORRACHARIA_COORDINATES: [number, number] = [-53.7437, -24.7161]; // Toledo coordinates
 
 export function LocationMap() {
   const mapContainer = useRef<HTMLDivElement | null>(null);
@@ -20,7 +20,7 @@ export function LocationMap() {
   });
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-16">
+    <div className="container-fluid py-4 py-md-5">
       <h2 className="mb-12 text-center text-4xl font-bold text-zinc-900">
         Nossa Localização
       </h2>

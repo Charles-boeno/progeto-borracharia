@@ -14,10 +14,13 @@ const initializeMapbox = (
   coordinates: [number, number],
   zoom: number
 ): Map => {
-  // @ts-ignore - we know this exists globally
+  if (!window.mapboxgl) {
+    console.error('Mapbox GL JS is not loaded');
+    return null;
+  }
+
   window.mapboxgl.accessToken = "pk_dummy";
   
-  // @ts-ignore - we know this exists globally
   const map = new window.mapboxgl.Map({
     container,
     style: "mapbox://styles/mapbox/streets-v12",
