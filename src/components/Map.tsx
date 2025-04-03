@@ -1,12 +1,12 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import mapboxgl from "mapbox-gl";
+import { Map, Marker } from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
 export function LocationMap() {
   const mapContainer = useRef<HTMLDivElement | null>(null);
-  const map = useRef<mapboxgl.Map | null>(null);
+  const map = useRef<Map | null>(null);
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -18,14 +18,14 @@ export function LocationMap() {
 
     mapboxgl.accessToken = "pk_dummy";
     
-    map.current = new mapboxgl.Map({
+    map.current = new Map({
       container: mapContainer.current,
       style: "mapbox://styles/mapbox/streets-v12",
       center: [-46.6388, -23.5489], // São Paulo coordinates
       zoom: 15,
     });
 
-    const marker = new mapboxgl.Marker()
+    const marker = new Marker()
       .setLngLat([-46.6388, -23.5489])
       .addTo(map.current);
 
