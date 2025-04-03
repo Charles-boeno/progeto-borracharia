@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, Tool, CheckCircle, Clock, Car } from "lucide-react";
+import { ArrowRight, Wrench, CheckCircle, Clock, Car } from "lucide-react";
 
 interface Step {
   id: number;
@@ -24,7 +24,7 @@ const steps: Step[] = [
     id: 2,
     title: "Diagnóstico",
     description: "Inspeção detalhada dos pneus",
-    icon: Tool,
+    icon: Wrench,
     duration: "10 min",
   },
   {
