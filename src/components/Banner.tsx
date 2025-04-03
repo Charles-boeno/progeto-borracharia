@@ -10,7 +10,7 @@ const bannerItems = [{
   title: "Borracharia do Borracheiro",
   description: "R. Carlos Sbaraine, 2264 - Jd. Panorama - Toledo - PR"
 }, {
-  image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1600&h=600&fit=crop",
+  image: "https://pre-built-images.s3.amazonaws.com/webapp-uploads/7e91310d77dbac9cedf99963676e2a9a.png",
   title: "Serviço 24 Horas Disponível",
   description: "Assistência emergencial quando você mais precisa"
 }, {
