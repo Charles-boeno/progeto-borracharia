@@ -1,38 +1,18 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { Map, Marker } from "mapbox-gl";
+import { useRef } from "react";
+import { useMapbox } from "@/lib/hooks/useMapbox";
 import "mapbox-gl/dist/mapbox-gl.css";
+
+const BORRACHARIA_COORDINATES: [number, number] = [-46.6388, -23.5489]; // São Paulo coordinates
 
 export function LocationMap() {
   const mapContainer = useRef<HTMLDivElement | null>(null);
-  const map = useRef<Map | null>(null);
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  useEffect(() => {
-    if (!isMounted || !mapContainer.current || map.current) return;
-
-    mapboxgl.accessToken = "pk_dummy";
-    
-    map.current = new Map({
-      container: mapContainer.current,
-      style: "mapbox://styles/mapbox/streets-v12",
-      center: [-46.6388, -23.5489], // São Paulo coordinates
-      zoom: 15,
-    });
-
-    const marker = new Marker()
-      .setLngLat([-46.6388, -23.5489])
-      .addTo(map.current);
-
-    return () => {
-      map.current?.remove();
-    };
-  }, [isMounted]);
+  
+  const { isInitialized } = useMapbox({
+    container: mapContainer.current!,
+    coordinates: BORRACHARIA_COORDINATES,
+  });
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-16">
