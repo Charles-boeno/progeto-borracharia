@@ -2,7 +2,6 @@
 
 import { Menu } from "@/components/Menu";
 import { Banner } from "@/components/Banner";
-import { TireSelector } from "@/components/TireSelector";
 import { Services } from "@/components/Services";
 import { LocationMap } from "@/components/Map";
 import { AboutUs } from "@/components/AboutUs";
@@ -15,7 +14,6 @@ export default function HomePage() {
     <main className="min-h-screen bg-zinc-50">
       <Menu />
       <Banner />
-      <TireSelector />
       <Services />
       <LocationMap />
       <AboutUs />
