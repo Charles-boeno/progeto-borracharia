@@ -6,6 +6,7 @@ import { Services } from "@/components/Services";
 import { LocationMap } from "@/components/Map";
 import { AboutUs } from "@/components/AboutUs";
 import { Footer } from "@/components/Footer";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 export default function HomePage() {
   return (
@@ -16,6 +17,7 @@ export default function HomePage() {
       <LocationMap />
       <AboutUs />
       <Footer />
+      <WhatsAppButton />
     </main>
   );
 }
