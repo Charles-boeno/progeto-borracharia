@@ -9,7 +9,13 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-6 md:mb-8">
           <div>
-            <h4 className="text-xl font-bold mb-3 md:mb-4">Borracharia<span className="text-borracharia-yellow">Rapidão</span></h4>
+            <div className="mb-3 md:mb-4">
+              <img 
+                src="/lovable-uploads/d8e9f6c7-d245-4d9b-b97f-28983fec15cb.png" 
+                alt="Borracharia Rapidão Logo" 
+                className="h-12 md:h-14"
+              />
+            </div>
             <p className="text-gray-300 mb-3 md:mb-4 text-sm md:text-base">
               Serviços de qualidade para seus pneus, com atendimento rápido e profissional.
             </p>

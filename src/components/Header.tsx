@@ -21,8 +21,12 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <Link to="/" className="text-2xl font-bold text-borracharia-yellow">
-              Borracharia<span className="text-white">Rapidão</span>
+            <Link to="/" className="flex items-center">
+              <img 
+                src="/lovable-uploads/d8e9f6c7-d245-4d9b-b97f-28983fec15cb.png" 
+                alt="Borracharia Rapidão Logo" 
+                className="h-12 md:h-14"
+              />
             </Link>
           </div>
 
