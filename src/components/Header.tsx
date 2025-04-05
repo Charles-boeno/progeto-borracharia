@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone, Mail } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 
@@ -33,18 +33,6 @@ const Header = () => {
             <Link to="/sobre" className="text-white hover:text-borracharia-yellow transition-colors">Sobre Nós</Link>
             <Link to="/contato" className="text-white hover:text-borracharia-yellow transition-colors">Contato</Link>
           </nav>
-
-          {/* Contact Info on Desktop */}
-          <div className="hidden md:flex items-center space-x-6">
-            <div className="flex items-center text-white">
-              <Phone className="h-4 w-4 mr-2 text-borracharia-yellow" />
-              <span>(11) 99999-9999</span>
-            </div>
-            <div className="flex items-center text-white">
-              <Mail className="h-4 w-4 mr-2 text-borracharia-yellow" />
-              <span>contato@borrachariarapidao.com</span>
-            </div>
-          </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
@@ -97,17 +85,6 @@ const Header = () => {
                 Contato
               </Link>
             </nav>
-            
-            <div className="mt-4 space-y-3">
-              <div className="flex items-center text-white">
-                <Phone className="h-4 w-4 mr-2 text-borracharia-yellow" />
-                <span>(11) 99999-9999</span>
-              </div>
-              <div className="flex items-center text-white">
-                <Mail className="h-4 w-4 mr-2 text-borracharia-yellow" />
-                <span>contato@borrachariarapidao.com</span>
-              </div>
-            </div>
           </div>
         </div>
       )}

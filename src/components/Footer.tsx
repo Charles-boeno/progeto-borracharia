@@ -60,12 +60,10 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="text-xl font-bold mb-3 md:mb-4">Contato</h4>
+            <h4 className="text-xl font-bold mb-3 md:mb-4">Endereço</h4>
             <address className="text-gray-300 not-italic text-sm md:text-base">
               <p>Av. Paulista, 1000 - Bela Vista</p>
               <p>São Paulo - SP, 01310-100</p>
-              <p className="mt-2">(11) 99999-9999</p>
-              <p className="mt-1">contato@borrachariarapidao.com</p>
             </address>
           </div>
         </div>

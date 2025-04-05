@@ -5,7 +5,8 @@ import { MessageSquare } from 'lucide-react';
 const WhatsAppButton = () => {
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent('Olá! Gostaria de mais informações sobre os serviços da sua borracharia.');
-    window.open(`https://wa.me/5511999999999?text=${message}`, '_blank');
+    // Removed the actual phone number
+    window.open(`https://wa.me/?text=${message}`, '_blank');
   };
 
   return (

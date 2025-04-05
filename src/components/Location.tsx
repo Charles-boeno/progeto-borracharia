@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { MapPin, Clock } from 'lucide-react';
 
 const Location = () => {
   const openGoogleMaps = () => {
@@ -21,7 +21,7 @@ const Location = () => {
 
         <div className="flex flex-col md:flex-row gap-8">
           <div className="w-full md:w-1/2 bg-white p-8 rounded-lg shadow-lg">
-            <h3 className="text-2xl font-bold mb-6">Informações de Contato</h3>
+            <h3 className="text-2xl font-bold mb-6">Informações</h3>
             
             <div className="space-y-6">
               <div className="flex items-start">
@@ -32,23 +32,6 @@ const Location = () => {
                     Av. Paulista, 1000 - Bela Vista<br />
                     São Paulo - SP, 01310-100
                   </p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <Phone className="h-6 w-6 text-borracharia-yellow mr-4 mt-1" />
-                <div>
-                  <h4 className="font-semibold text-lg">Telefone</h4>
-                  <p className="text-gray-700">(11) 99999-9999</p>
-                  <p className="text-gray-700">(11) 3333-3333</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start">
-                <Mail className="h-6 w-6 text-borracharia-yellow mr-4 mt-1" />
-                <div>
-                  <h4 className="font-semibold text-lg">Email</h4>
-                  <p className="text-gray-700">contato@borrachariarapidao.com</p>
                 </div>
               </div>
               
