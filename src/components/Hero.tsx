@@ -32,7 +32,7 @@ const Hero = () => {
             <div className="relative">
               <div className="absolute -top-4 -left-4 w-full h-full bg-borracharia-yellow rounded-lg"></div>
               <img 
-                src="https://images.unsplash.com/photo-1580983218765-f663bec07b37?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                src="/img/mechanic.jpg" 
                 alt="Mecânico trocando pneu" 
                 className="w-full h-auto rounded-lg relative z-10 shadow-xl"
               />

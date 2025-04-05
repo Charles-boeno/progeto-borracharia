@@ -13,7 +13,7 @@ const About = () => {
             <div className="relative">
               <div className="absolute top-0 left-0 w-full h-full bg-borracharia-yellow rounded-lg transform -translate-x-5 -translate-y-5"></div>
               <img 
-                src="https://images.unsplash.com/photo-1606800052052-a08af7148866?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                src="/img/team.jpg" 
                 alt="Equipe da borracharia" 
                 className="w-full h-auto rounded-lg relative z-10 shadow-xl"
               />

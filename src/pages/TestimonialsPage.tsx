@@ -117,7 +117,7 @@ const TestimonialsPage = () => {
               <div className="flex items-center justify-center">
                 <div className="w-16 h-16 rounded-full overflow-hidden mr-4">
                   <img 
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" 
+                    src="/img/testimonial.jpg" 
                     alt="Cliente destaque" 
                     className="w-full h-full object-cover"
                   />
