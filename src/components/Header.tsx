@@ -25,7 +25,7 @@ const Header = () => {
               <img 
                 src="/lovable-uploads/d8e9f6c7-d245-4d9b-b97f-28983fec15cb.png" 
                 alt="Borracharia Rapidão Logo" 
-                className="h-12 md:h-14"
+                className="h-15 md:h-[17.5px]"
               />
             </Link>
           </div>
