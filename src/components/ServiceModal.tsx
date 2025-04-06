@@ -35,14 +35,14 @@ export function ServiceModal({ service, onClose }: ServiceModalProps) {
             <X className="h-6 w-6" />
           </button>
 
-          <div className="flex items-start space-x-6">
-            <service.icon className="h-16 w-16 shrink-0 text-yellow-500" />
+          <div className="flex flex-col sm:flex-row sm:items-start space-y-4 sm:space-y-0 sm:space-x-6">
+            <service.icon className="h-12 w-12 sm:h-16 sm:w-16 shrink-0 text-yellow-500" />
             <div>
-              <h3 className="mb-4 text-2xl font-bold text-zinc-900">
+              <h3 className="mb-2 sm:mb-4 text-xl sm:text-2xl font-bold text-zinc-900">
                 {service.title}
               </h3>
-              <p className="mb-6 text-zinc-600">{service.description}</p>
-              <div className="space-y-3 text-zinc-600">
+              <p className="mb-4 sm:mb-6 text-sm sm:text-base text-zinc-600">{service.description}</p>
+              <div className="space-y-2 sm:space-y-3 text-sm sm:text-base text-zinc-600">
                 {service.details.map((detail, index) => (
                   <div key={index} className="flex items-center space-x-2">
                     <div className="h-1.5 w-1.5 rounded-full bg-yellow-500" />

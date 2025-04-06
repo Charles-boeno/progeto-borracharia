@@ -81,7 +81,7 @@ export function Testimonials() {
               transition={{ duration: 0.5 }}
               className="flex flex-col items-center"
             >
-              <div className="mb-6 h-24 w-24 md:h-32 md:w-32 overflow-hidden rounded-full border-4 border-yellow-500">
+              <div className="mb-4 sm:mb-6 h-20 w-20 sm:h-24 sm:w-24 md:h-32 md:w-32 overflow-hidden rounded-full border-4 border-yellow-500">
                 <img
                   src={testimonials[currentIndex].image}
                   alt={testimonials[currentIndex].name}
@@ -89,14 +89,14 @@ export function Testimonials() {
                 />
               </div>
               <div className="relative max-w-3xl text-center">
-                <Quote className="absolute -left-4 -top-4 h-8 w-8 text-yellow-500 opacity-25" />
-                <p className="mb-6 text-xl text-zinc-700">
+                <Quote className="absolute -left-2 sm:-left-4 -top-2 sm:-top-4 h-6 w-6 sm:h-8 sm:w-8 text-yellow-500 opacity-25" />
+                <p className="mb-4 sm:mb-6 text-base sm:text-xl text-zinc-700">
                   {testimonials[currentIndex].content}
                 </p>
-                <h3 className="text-lg font-semibold text-zinc-900">
+                <h3 className="text-base sm:text-lg font-semibold text-zinc-900">
                   {testimonials[currentIndex].name}
                 </h3>
-                <p className="text-sm text-zinc-500">{testimonials[currentIndex].role}</p>
+                <p className="text-xs sm:text-sm text-zinc-500">{testimonials[currentIndex].role}</p>
               </div>
             </motion.div>
           </AnimatePresence>

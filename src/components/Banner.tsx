@@ -1,44 +1,56 @@
 "use client";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-const bannerItems = [{
-  image: "/img/banner-1.jpg",
-  title: "Borracharia do Borracheiro",
-  description: "R. Carlos Sbaraine, 2264 - Jd. Panorama - Toledo - PR"
-}, {
-  image: "/img/banner-2.jpg",
-  title: "Serviço 24 Horas Disponível",
-  description: "Assistência emergencial quando você mais precisa"
-}, {
-  image: "/img/banner-3.jpg",
-  title: "Qualidade Garantida",
-  description: "Equipe especializada para melhor atendimento"
-}];
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import Image from "next/image";
+
 export function Banner() {
-  return <div className="mt-16 px-4 mb-8">
-      <Swiper 
-        modules={[Autoplay, Navigation, Pagination]} 
-        navigation 
-        pagination={{
-          clickable: true
-        }} 
-        autoplay={{
-          delay: 6000,
-          disableOnInteraction: false
-        }} 
-        loop 
-        className="mx-auto h-[300px] max-w-5xl"
-      >
-        {bannerItems.map((item, index) => <SwiperSlide key={index}>
-            <div className="relative h-full w-full bg-cover bg-center" style={{
-          backgroundImage: `url(${item.image})`
-        }}>
-            </div>
-          </SwiperSlide>)}
-      </Swiper>
-    </div>;
-}
+  return (
+    <section className="relative h-screen w-full overflow-hidden bg-secondary">
+      {/* Imagem de fundo */}
+      <div className="absolute inset-0">
+        {/* Imagem para mobile */}
+        <img
+          src="/img/movel.jpg"
+          alt="Borracharia Express"
+          className="h-full w-full object-cover object-center opacity-50 md:hidden"
+        />
+        {/* Imagem para desktop */}
+        <img
+          src="/img/banner.jpg"
+          alt="Borracharia Express"
+          className="hidden h-full w-full object-cover object-center opacity-50 md:block"
+        />
+      </div>
+
+      {/* Conteúdo */}
+      <div className="container-fluid relative flex h-full items-center justify-center px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-2xl text-center text-white"
+        >
+          <h1 className="mb-4 text-3xl font-bold sm:text-4xl md:text-5xl lg:text-6xl">
+            Sua Borracharia de Confiança
+          </h1>
+          <p className="mb-8 text-base text-gray-200 sm:text-lg md:text-xl">
+            Serviços de qualidade para seu veículo com atendimento rápido e eficiente.
+            Estamos prontos para ajudar você 24 horas por dia.
+          </p>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="mx-auto flex items-center space-x-2 rounded-lg bg-primary px-6 py-3 text-base font-medium text-white transition-colors hover:bg-blue-700 sm:text-lg"
+            onClick={() => {
+              window.open('https://wa.me/554599588507', '_blank');
+            }}
+          >
+            <span>Entre em Contato</span>
+            <ArrowRight className="h-5 w-5" />
+          </motion.button>
+        </motion.div>
+      </div>
+    </section>
+  );
+} 

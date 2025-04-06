@@ -8,14 +8,20 @@
             {
               protocol: 'https',
               hostname: '*',
-              pathname: '**'},
-          ]},
+              pathname: '**',
+            },
+          ],
+        },
         eslint: {
-          ignoreDuringBuilds: true},
+          ignoreDuringBuilds: true,
+        },
         typescript: {
-          ignoreBuildErrors: true},
+          ignoreBuildErrors: true,
+        },
         webpack: (config, { isServer }) => {
           config.stats = "verbose";
           return config;
-        }};
+        },
+        output: "export"
+      };
       export default config;

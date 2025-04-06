@@ -42,21 +42,21 @@ export function Menu() {
   };
 
   return (
-    <nav className="fixed top-0 z-50 w-full bg-zinc-900 shadow-lg">
+    <nav className="fixed top-0 z-50 w-full bg-black shadow-lg">
       <div className="container-fluid">
         <div className="flex h-20 items-center justify-between">
           <div className="flex items-center">
             <img 
               src="/img/logo.png"
               alt="Borracharia Express Logo"
-              className="h-16 w-auto md:h-20"
+              className="h-32 w-auto md:h-43"
             />
           </div>
           
           {/* Mobile menu button */}
           <button 
             onClick={toggleMenu}
-            className="md:hidden text-gray-300 hover:text-yellow-500"
+            className="md:hidden text-white hover:text-primary"
           >
             {isOpen ? (
               <X className="h-6 w-6" />
@@ -79,8 +79,8 @@ export function Menu() {
                 }}
                 className={`flex items-center space-x-2 px-3 py-2 text-sm font-medium ${
                   activeItem === item.id
-                    ? "text-yellow-500"
-                    : "text-gray-300 hover:text-yellow-500"
+                    ? "text-primary"
+                    : "text-white hover:text-primary"
                 }`}
               >
                 <item.icon className="h-5 w-5" />
@@ -97,7 +97,7 @@ export function Menu() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden"
+              className="md:hidden bg-black"
             >
               <div className="flex flex-col space-y-2 pb-4">
                 {menuItems.map((item) => (
@@ -111,8 +111,8 @@ export function Menu() {
                     }}
                     className={`flex items-center space-x-2 px-3 py-2 text-sm font-medium ${
                       activeItem === item.id
-                        ? "text-yellow-500"
-                        : "text-gray-300 hover:text-yellow-500"
+                        ? "text-primary"
+                        : "text-white hover:text-primary"
                     }`}
                   >
                     <item.icon className="h-5 w-5" />

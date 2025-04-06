@@ -76,7 +76,7 @@ export function Services() {
       >
         Nossos Serviços
       </motion.h2>
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
+      <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2 md:gap-8">
         {services.map((service, index) => (
           <motion.div
             key={index}
@@ -90,22 +90,22 @@ export function Services() {
             }}
             whileHover={{ scale: 1.02 }}
             onClick={() => setSelectedService(service)}
-            className="group cursor-pointer rounded-lg bg-white p-6 shadow-lg transition-all hover:shadow-xl"
+            className="group cursor-pointer rounded-lg bg-white p-4 sm:p-6 shadow-lg transition-all hover:shadow-xl"
           >
-            <div className="flex items-start space-x-4">
+            <div className="flex items-start space-x-3 sm:space-x-4">
               <ServiceIcon 
                 Icon={service.icon} 
                 isHovered={false} 
               />
               <div>
-                <h3 className="mb-2 text-xl font-semibold text-zinc-900 group-hover:text-yellow-500">
+                <h3 className="mb-1 sm:mb-2 text-lg sm:text-xl font-semibold text-zinc-900 group-hover:text-yellow-500">
                   {service.title}
                 </h3>
-                <p className="text-zinc-600">{service.description}</p>
+                <p className="text-sm sm:text-base text-zinc-600">{service.description}</p>
                 <motion.p
                   initial={{ opacity: 0 }}
                   whileHover={{ opacity: 1 }}
-                  className="mt-2 text-sm font-medium text-yellow-500"
+                  className="mt-2 text-xs sm:text-sm font-medium text-yellow-500"
                 >
                   Clique para saber mais →
                 </motion.p>
