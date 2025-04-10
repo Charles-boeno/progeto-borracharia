@@ -89,9 +89,9 @@ export function ServiceFlow() {
         </div>
 
         <div className="relative mx-auto max-w-4xl">
-          <div className="absolute left-1/2 top-1/2 h-1 w-full -translate-x-1/2 -translate-y-1/2 bg-zinc-200" />
+          <div className="absolute left-1/2 top-0 h-full w-1 -translate-x-1/2 bg-zinc-200 md:left-1/2 md:top-1/2 md:h-1 md:w-full md:-translate-x-1/2 md:-translate-y-1/2" />
           
-          <div className="relative flex flex-col space-y-8 md:flex-row md:justify-between md:space-y-0">
+          <div className="relative flex flex-col items-center space-y-8 md:flex-row md:items-start md:justify-between md:space-y-0">
             {steps.map((step, index) => (
               <motion.div
                 key={step.id}
@@ -119,14 +119,16 @@ export function ServiceFlow() {
                     }`}
                   />
                   {index < steps.length - 1 && (
-                    <motion.div
-                      initial={{ width: 0 }}
-                      animate={{
-                        width: activeStep && activeStep > step.id ? "100%" : 0,
-                      }}
-                      className="absolute left-full h-1 bg-yellow-500"
-                      style={{ width: "100px" }}
-                    />
+                    <div className="absolute bottom-0 left-1/2 h-[4rem] w-1 -translate-x-1/2 translate-y-full bg-zinc-200 md:bottom-auto md:left-full md:top-1/2 md:h-1 md:w-[calc(100%_+_Xrem)] md:-translate-x-0 md:-translate-y-1/2">
+                      <motion.div
+                        initial={{ height: 0 }}
+                        animate={{
+                          height: activeStep && activeStep > step.id ? "100%" : 0,
+                          width: "100%",
+                        }}
+                        className="h-full w-full origin-top bg-yellow-500 md:h-1 md:w-full md:origin-left"
+                      />
+                    </div>
                   )}
                 </motion.div>
                 

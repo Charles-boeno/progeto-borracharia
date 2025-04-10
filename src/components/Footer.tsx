@@ -87,8 +87,15 @@ export function Footer() {
         </div>
 
         <div className="mt-6 sm:mt-8 border-t border-zinc-800 pt-6 sm:pt-8 text-center">
-          <p className="text-sm sm:text-base">
-            © {currentYear} Borracharia Express. Todos os direitos reservados.
+          <p className="text-sm sm:text-base text-zinc-400">
+            © {currentYear}{' '}
+            <a 
+              href="mailto:ccharlesjjose@gmail.com" 
+              className="text-blue-500 hover:text-blue-400 transition-colors"
+            >
+              ccharlesjjose@gmail.com
+            </a>
+            . Todos os direitos reservados.
           </p>
         </div>
       </div>

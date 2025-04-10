@@ -1,6 +1,6 @@
 "use client";
 
-import { Home, Wrench, Users, Phone, Menu as MenuIcon, X } from "lucide-react";
+import { Home, Wrench, Users, Phone, Menu as MenuIcon, X, Instagram, Facebook } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 
@@ -46,11 +46,33 @@ export function Menu() {
       <div className="container-fluid">
         <div className="flex h-20 items-center justify-between">
           <div className="flex items-center">
-            <img 
-              src="/img/logo.png"
-              alt="Borracharia Express Logo"
-              className="h-32 w-auto md:h-43"
-            />
+            <button 
+              onClick={() => scrollToSection('top')}
+              className="bg-transparent border-none p-0 cursor-pointer"
+              aria-label="Voltar ao topo"
+            >
+              <img 
+                src="/img/logo.png"
+                alt="Borracharia Express Logo"
+                className="h-40 w-auto md:h-52"
+              />
+            </button>
+            <div className="flex items-center space-x-2 ml-4"> 
+              <a
+                href="https://www.instagram.com/borracharia937"
+                aria-label="Instagram"
+                className="p-2 transition-transform hover:scale-110"
+              >
+                <img src="/img/-logo.png" alt="Instagram" className="h-6 w-6" />
+              </a>
+              <a
+                href="https://www.facebook.com/borracharia.do.borracheiro"
+                aria-label="Facebook"
+                className="p-2 transition-transform hover:scale-110"
+              >
+                <img src="/img/facebook.png" alt="Facebook" className="h-6 w-6" />
+              </a>
+            </div>
           </div>
           
           {/* Mobile menu button */}
