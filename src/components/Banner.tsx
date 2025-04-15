@@ -9,7 +9,7 @@ export function Banner() {
     <section className="relative h-screen w-full overflow-hidden bg-secondary">
       {/* Restauradas as imagens estáticas de fundo */}
       <div className="absolute inset-0">
-        {/* Alterada a imagem específica para mobile de volta para .jpg */}
+        {/* Revertendo posição do objeto para 'left top' na imagem mobile */}
         <img
           src="/img/movel.jpg"
           alt="Borracharia"
@@ -44,7 +44,7 @@ export function Banner() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="mx-auto mt-80 md:mt-8 flex items-center space-x-2 rounded-lg bg-yellow-400 px-6 py-3 text-base font-medium text-black transition-colors hover:bg-yellow-500 sm:text-lg"
+            className="mx-auto mt-24 md:mt-8 flex items-center space-x-2 rounded-lg bg-yellow-400 px-6 py-3 text-base font-medium text-black transition-colors hover:bg-yellow-500 sm:text-lg"
             onClick={() => {
               const phoneNumber = "5545999588507"; // Adicionado código do país 55
               const message = "o que posso lhe ajudar";
