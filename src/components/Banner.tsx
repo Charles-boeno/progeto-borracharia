@@ -9,9 +9,9 @@ export function Banner() {
     <section className="relative h-screen w-full overflow-hidden bg-secondary">
       {/* Restauradas as imagens estáticas de fundo */}
       <div className="absolute inset-0">
-        {/* Restaurada imagem específica para mobile */}
+        {/* Alterada a imagem específica para mobile de volta para .jpg */}
         <img
-          src="/img/movel.png"
+          src="/img/movel.jpg"
           alt="Borracharia"
           className="h-full w-full object-cover object-left-top md:hidden"
         />
