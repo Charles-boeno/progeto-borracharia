@@ -7,19 +7,19 @@ import Image from "next/image";
 export function Banner() {
   return (
     <section className="relative h-screen w-full overflow-hidden bg-secondary">
-      {/* Imagem de fundo */}
+      {/* Restauradas as imagens estáticas de fundo */}
       <div className="absolute inset-0">
-        {/* Imagem para mobile */}
+        {/* Restaurada imagem específica para mobile */}
         <img
-          src="/img/movel.jpg"
+          src="/img/movel.png"
           alt="Borracharia"
-          className="h-full w-full object-cover object-center opacity-50 md:hidden"
+          className="h-full w-full object-cover object-left-top md:hidden"
         />
-        {/* Imagem para desktop */}
+        {/* Restaurada imagem específica para desktop */}
         <img
           src="/img/banner.jpg"
           alt="Borracharia Express"
-          className="hidden h-full w-full object-cover object-center opacity-50 md:block"
+          className="hidden h-full w-full object-cover object-center md:block"
         />
       </div>
 
@@ -31,24 +31,31 @@ export function Banner() {
           transition={{ duration: 0.8 }}
           className="max-w-2xl text-center text-black"
         >
-          <h1 className="mb-4 text-3xl font-bold sm:text-4xl md:text-5xl lg:text-6xl">
-            Sua Borracharia de Confiança
-          </h1>
-          <p className="mb-8 text-base sm:text-lg md:text-xl">
-            Serviços de qualidade para seu veículo com atendimento rápido e eficiente.
-            Estamos prontos para ajudar você 24 horas por dia.
-          </p>
+          {/* Removido o h1 */}
+          {/* <h1 className="...">...</h1> */}
+          
+          {/* Removido o p */}
+          {/* <p className="...">...</p> */}
+          
+          {/* Removendo a div com os ícones sociais */}
+          {/* <div className="mt-8 flex justify-center space-x-4"> ... </div> */}
+          
+          {/* Readicionado o botão "Entre em Contato" */}
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="mx-auto flex items-center space-x-2 rounded-lg bg-yellow-400 px-6 py-3 text-base font-medium text-black transition-colors hover:bg-yellow-500 sm:text-lg"
+            className="mx-auto mt-80 md:mt-8 flex items-center space-x-2 rounded-lg bg-yellow-400 px-6 py-3 text-base font-medium text-black transition-colors hover:bg-yellow-500 sm:text-lg"
             onClick={() => {
-              window.open('https://wa.me/554599588507', '_blank');
+              const phoneNumber = "5545999588507"; // Adicionado código do país 55
+              const message = "o que posso lhe ajudar";
+              const encodedMessage = encodeURIComponent(message);
+              window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
             }}
           >
             <span>Entre em Contato</span>
             <ArrowRight className="h-5 w-5" />
           </motion.button>
+          
         </motion.div>
       </div>
     </section>

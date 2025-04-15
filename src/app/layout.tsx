@@ -4,6 +4,8 @@ import "@/styles/globals.css";
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
 import { BackToTopButton } from '@/components/BackToTopButton';
+import { WhatsAppButton } from '@/components/WhatsAppButton';
+import { SocialLinksFloater } from '@/components/SocialLinksFloater';
 
 export const metadata: Metadata = {
   title: "Create T3 App",
@@ -18,7 +20,9 @@ export default function RootLayout({
     <html lang="en" className={`${GeistSans.variable}`}>
       <body>
         {children}
+        <WhatsAppButton />
         <BackToTopButton />
+        <SocialLinksFloater />
       </body>
     </html>
   );

@@ -7,7 +7,9 @@ import { motion } from "framer-motion";
 export function WhatsAppButton() {
   const handleClick = () => {
     const phoneNumber = "554599588507"; // Número com código do país (55) e DDD (45)
-    window.open(`https://wa.me/${phoneNumber}`, "_blank");
+    const message = "o que posso lhe ajudar"; // Mensagem adicionada
+    const encodedMessage = encodeURIComponent(message); // Codifica a mensagem para URL
+    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank"); // Adiciona a mensagem à URL
   };
 
   return (

@@ -42,7 +42,7 @@ export function Menu() {
   };
 
   return (
-    <nav className="fixed top-0 z-50 w-full bg-black shadow-lg">
+    <nav className="fixed top-0 z-50 w-full bg-black/40 shadow-lg backdrop-blur-sm">
       <div className="container-fluid">
         <div className="flex h-20 items-center justify-between">
           <div className="flex items-center">
@@ -57,28 +57,12 @@ export function Menu() {
                 className="h-40 w-auto md:h-52"
               />
             </button>
-            <div className="flex items-center space-x-2 ml-4"> 
-              <a
-                href="https://www.instagram.com/borracharia937"
-                aria-label="Instagram"
-                className="p-2 transition-transform hover:scale-110"
-              >
-                <img src="/img/-logo.png" alt="Instagram" className="h-6 w-6" />
-              </a>
-              <a
-                href="https://www.facebook.com/borracharia.do.borracheiro"
-                aria-label="Facebook"
-                className="p-2 transition-transform hover:scale-110"
-              >
-                <img src="/img/facebook.png" alt="Facebook" className="h-6 w-6" />
-              </a>
-            </div>
           </div>
           
           {/* Mobile menu button */}
           <button 
             onClick={toggleMenu}
-            className="md:hidden text-white hover:text-primary"
+            className="md:hidden text-white hover:text-gray-300"
           >
             {isOpen ? (
               <X className="h-6 w-6" />
@@ -99,10 +83,10 @@ export function Menu() {
                   scrollToSection(item.ref);
                   setIsOpen(false);
                 }}
-                className={`flex items-center space-x-2 px-3 py-2 text-sm font-medium ${
+                className={`flex items-center space-x-2 px-3 py-2 text-base font-medium transition-colors tracking-wide ${
                   activeItem === item.id
-                    ? "text-primary"
-                    : "text-white hover:text-primary"
+                    ? "text-white font-bold"
+                    : "text-white hover:text-gray-300"
                 }`}
               >
                 <item.icon className="h-5 w-5" />
@@ -119,7 +103,7 @@ export function Menu() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden bg-black"
+              className="md:hidden bg-black/40 shadow-lg backdrop-blur-sm"
             >
               <div className="flex flex-col space-y-2 pb-4">
                 {menuItems.map((item) => (
@@ -131,10 +115,10 @@ export function Menu() {
                       scrollToSection(item.ref);
                       setIsOpen(false);
                     }}
-                    className={`flex items-center space-x-2 px-3 py-2 text-sm font-medium ${
+                    className={`flex items-center space-x-2 px-3 py-2 text-base font-medium transition-colors tracking-wide ${
                       activeItem === item.id
-                        ? "text-primary"
-                        : "text-white hover:text-primary"
+                        ? "text-white font-bold"
+                        : "text-white hover:text-gray-300"
                     }`}
                   >
                     <item.icon className="h-5 w-5" />

@@ -37,7 +37,7 @@ export function Footer() {
                 <Instagram className="h-4 w-4 sm:h-5 sm:w-5" />
               </motion.a>
               <motion.a
-                href="https://wa.me/554599588507"
+                href="https://wa.me/554599588507?text=o%20que%20posso%20lhe%20ajudar"
                 whileHover={{ scale: 1.1 }}
                 className="text-zinc-400 hover:text-primary"
                 target="_blank"
