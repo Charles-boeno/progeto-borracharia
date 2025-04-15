@@ -54,7 +54,7 @@ export function Menu() {
               <img 
                 src="/img/logo.png"
                 alt="Borracharia Express Logo"
-                className="h-40 w-auto md:h-52"
+                className="h-48 w-auto md:h-64"
               />
             </button>
           </div>
